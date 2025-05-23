@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDE-Tiyatro Bonn</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="HDE-Tiyatro Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <button onclick="changeLanguage('de')">DE</button>
+            <button onclick="changeLanguage('tr')">TR</button>
+            <button onclick="changeLanguage('en')">EN</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                <li><a href="termine.html" data-translate="nav.dates">Termine & Buchung</a></li>
+                <li><a href="videolar.html" data-translate="nav.videos">Videos</a></li>
+                <li><a href="ort.html" data-translate="nav.location">Ort</a></li>
+                <li><a href="spende.html" data-translate="nav.donate">Spenden</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1 data-translate="home.title">Willkommen bei HDE-Tiyatro Bonn</h1>
+            <div class="home-content">
+                <p data-translate="home.subtitle">Ihre Bühne für türkisches Theater in Bonn</p>
+                <p data-translate="home.description1">Entdecken Sie die faszinierende Welt des türkischen Theaters in Bonn. Wir bieten Ihnen einzigartige Aufführungen, die türkische Kultur und Traditionen auf der Bühne zum Leben erwecken.</p>
+                <p data-translate="home.description2">Unser Theater ist ein Ort der Begegnung, an dem Menschen verschiedener Kulturen zusammenkommen, um die Schönheit und Tiefe türkischer Dramaturgie zu erleben.</p>
+                <p data-translate="home.description3">Besuchen Sie unsere Aufführungen und lassen Sie sich von der Magie des Theaters verzaubern!</p>
+            </div>
+            <h1 data-translate="home.team">Unser Team</h1>
+            <img src="team.jpg" alt="Bild HDE-Tiyatro" class="home-image">
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p data-translate="footer.contact">Kontakt:</p>
+            <p>E-Mail: <a href="mailto:yunusemreguevercin11@gmail.com">yunusemreguevercin11@gmail.com</a></p>
+            <p>Telefon: <a href="tel:015904975557">01590 4975557</a></p>
+            <p>TikTok: <a href="https://www.tiktok.com/@hdetiyatrobonn" target="_blank">@hdetiyatrobonn</a></p>
+            <p>YouTube: <a href="https://www.youtube.com/@HDE-tiyatro-bonn" target="_blank">@HDE-tiyatro-bonn</a></p>
+        </div>
+        <p class="copyright" data-translate="footer.copyright">&copy; 2024 HDE-Tiyatro Bonn. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>

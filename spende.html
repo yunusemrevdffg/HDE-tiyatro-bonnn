@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spenden - HDE-Tiyatro Bonn</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="HDE-Tiyatro Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <button onclick="changeLanguage('de')">DE</button>
+            <button onclick="changeLanguage('tr')">TR</button>
+            <button onclick="changeLanguage('en')">EN</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                <li><a href="termine.html" data-translate="nav.dates">Termine & Buchung</a></li>
+                <li><a href="videolar.html" data-translate="nav.videos">Videos</a></li>
+                <li><a href="ort.html" data-translate="nav.location">Ort</a></li>
+                <li><a href="spende.html" data-translate="nav.donate">Spenden</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="spende-section">
+            <h2 data-translate="donate.title">Unterstützen Sie uns</h2>
+            <div class="spende-container">
+                <p data-translate="donate.description">Mit Ihrer Spende unterstützen Sie unsere kulturelle Arbeit und helfen uns, weitere Projekte zu realisieren.</p>
+                <div id="donate-button-container">
+                    <div id="donate-button"></div>
+                    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                    <script>
+                    PayPal.Donation.Button({
+                        env:'production',
+                        hosted_button_id:'TWRFL52H2USES',
+                        image: {
+                            src:'https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif',
+                            alt:'Spenden mit dem PayPal-Button',
+                            title:'PayPal - The safer, easier way to pay online!',
+                        }
+                    }).render('#donate-button');
+                    </script>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p data-translate="footer.contact">Kontakt:</p>
+            <p>E-Mail: <a href="mailto:yunusemreguevercin11@gmail.com">yunusemreguevercin11@gmail.com</a></p>
+            <p>Telefon: <a href="tel:015904975557">01590 4975557</a></p>
+            <p>TikTok: <a href="https://www.tiktok.com/@hdetiyatrobonn" target="_blank">@hdetiyatrobonn</a></p>
+        </div>
+        <p class="copyright" data-translate="footer.copyright">&copy; 2024 HDE-Tiyatro Bonn. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

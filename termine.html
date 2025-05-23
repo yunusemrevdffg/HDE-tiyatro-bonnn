@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termine & Buchung - HDE-Tiyatro Bonn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="HDE-Tiyatro Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <button onclick="changeLanguage('de')">DE</button>
+            <button onclick="changeLanguage('tr')">TR</button>
+            <button onclick="changeLanguage('en')">EN</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                <li><a href="termine.html" data-translate="nav.dates">Termine & Buchung</a></li>
+                <li><a href="videolar.html" data-translate="nav.videos">Videos</a></li>
+                <li><a href="ort.html" data-translate="nav.location">Ort</a></li>
+                <li><a href="spende.html" data-translate="nav.donate">Spenden</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="termine-section">
+            <h2 data-translate="dates.title">Termine & Buchung</h2>
+            <div class="termine-container">
+                <div class="booking-form">
+                    <h3 data-translate="dates.subtitle">Buchen Sie Ihre Tickets</h3>
+                    <form id="bookingForm">
+                        <div class="calendar-container">
+                            <div class="form-group">
+                                <label data-translate="dates.select_date">Datum auswählen:</label>
+                                <input type="text" id="calendar" placeholder="Datum auswählen">
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="dates.select_time">Uhrzeit auswählen:</label>
+                                <input type="text" id="time" placeholder="Uhrzeit auswählen">
+                            </div>
+                        </div>
+                        <div class="booking-details">
+                            <div class="form-group">
+                                <label for="name" data-translate="dates.name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-translate="dates.email">E-Mail:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" data-translate="dates.phone">Telefon:</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="persons" data-translate="dates.tickets">Anzahl der Personen:</label>
+                                <input type="number" id="persons" name="persons" min="1" max="6" value="1" required>
+                                <small class="form-description">Bitte geben Sie an, für wie viele Personen Sie reservieren möchten. Die maximale Gruppengröße beträgt 6 Personen.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" data-translate="dates.address">Adresse:</label>
+                                <input type="text" id="address" name="address" required placeholder="Straße, Hausnummer, PLZ, Stadt">
+                            </div>
+                            <div class="form-group">
+                                <label for="purpose" data-translate="dates.purpose">Zweck der Reservierung:</label>
+                                <select id="purpose" name="purpose" required>
+                                    <option value="">Bitte wählen...</option>
+                                    <option value="theater">Theateraufführung</option>
+                                    <option value="Hochzeit">Hochzeit</option>
+                                    <option value="spetziel mit wunsch">Spezielle Veranstaltung</option>
+                                    <option value="other">Sonstiges</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-translate="dates.message">Zusätzliche Nachricht (optional):</label>
+                                <textarea id="message" name="message" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="book-button" data-translate="dates.book">Termin buchen</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p data-translate="footer.contact">Kontakt:</p>
+            <p>E-Mail: <a href="mailto:yunusemreguevercin11@gmail.com">yunusemreguevercin11@gmail.com</a></p>
+            <p>Telefon: <a href="tel:015904975557">01590 4975557</a></p>
+            <p>TikTok: <a href="https://www.tiktok.com/@hdetiyatrobonn" target="_blank">@hdetiyatrobonn</a></p>
+        </div>
+        <p class="copyright" data-translate="footer.copyright">&copy; 2024 HDE-Tiyatro Bonn. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/de.js"></script>
+    <script>
+        // Kalender initialisieren
+        flatpickr("#calendar", {
+            locale: "de",
+            dateFormat: "d.m.Y",
+            minDate: "today"
+        });
+
+        // Uhrzeit-Picker initialisieren
+        flatpickr("#time", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true,
+            minTime: "09:00",
+            maxTime: "22:00"
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

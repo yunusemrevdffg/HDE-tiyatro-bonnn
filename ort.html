@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ort - HDE-Tiyatro Bonn</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="HDE-Tiyatro Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <button onclick="changeLanguage('de')">DE</button>
+            <button onclick="changeLanguage('tr')">TR</button>
+            <button onclick="changeLanguage('en')">EN</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                <li><a href="termine.html" data-translate="nav.dates">Termine & Buchung</a></li>
+                <li><a href="videolar.html" data-translate="nav.videos">Videos</a></li>
+                <li><a href="ort.html" data-translate="nav.location">Ort</a></li>
+                <li><a href="spende.html" data-translate="nav.donate">Spenden</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="location-section">
+            <h2 data-translate="location.title">Unser Standort</h2>
+            <div class="location-details">
+                <div class="address-info">
+                    <h3 data-translate="location.address">Adresse</h3>
+                    <p>Ditib Zentralmoschee Bonn<br>
+                    Hochstadenring 43<br>
+                    53119 Bonn</p>
+                </div>
+                <div class="directions">
+                    <h3 data-translate="location.directions">Wegbeschreibung</h3>
+                    <p>Von der Innenstadt aus erreichen Sie uns in 10 Minuten zu Fuß.</p>
+                </div>
+                <div class="parking">
+                    <h3 data-translate="location.parking">Parkplätze</h3>
+                    <p>Kostenlose Parkplätze sind in der Nähe verfügbar.</p>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5050.203650341536!2d7.084216976641065!3d50.73660027164826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bee1bda8ca56a1%3A0xb9ff95f81548b98f!2sDITIB%20Bonn%20Zentralmoschee!5e0!3m2!1sde!2sde!4v1747516976203!5m2!1sde!2sde" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p data-translate="footer.contact">Kontakt:</p>
+            <p>E-Mail: <a href="mailto:yunusemreguevercin11@gmail.com">yunusemreguevercin11@gmail.com</a></p>
+            <p>Telefon: <a href="tel:015904975557">01590 4975557</a></p>
+            <p>TikTok: <a href="https://www.tiktok.com/@hdetiyatrobonn" target="_blank">@hdetiyatrobonn</a></p>
+        </div>
+        <p class="copyright" data-translate="footer.copyright">&copy; 2024 HDE-Tiyatro Bonn. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
